@@ -23,8 +23,6 @@ public class PropertyBinderRender implements ISimpleBlockRenderingHandler {
         block.setBlockBoundsForItemRender();
         renderer.setRenderBoundsFromBlock(block);
 
-        renderer.renderBlockAsItem(Blocks.redstone_torch, 1 , 1F);
-
         GL11.glPushMatrix();
 
         GL11.glTranslatef(-0.5F, -0.5F, -0.5F);

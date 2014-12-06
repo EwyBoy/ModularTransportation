@@ -2,25 +2,26 @@
 
 tile.Conveyor.name=Conveyor
 tile.Router.name=Router
+tile.Pipe.name=Pipe
+tile.PropertyInscriber.name
+tile.PropertyBinder.name
+tile.Monitor.name
+tile.PropertyCube.name
 
 #Items
 
 item.Wrench.name=Wrench
-item.WrenchCore.name=Wrench Core
-item.WrenchHandle.name=Wrench Handle
-item.WrenchHead.name=Wrench Head
+item.SDCard.name=SD
 
-item.Gear.name=Gear
-item.Roller.name=Roller
-item.RollerStrip.name=Roller Strip
-item.BeltTrack.name=Belt
+CPU0.name=Mono Cored CPU
+CPU1.name=Quad Cored CPU
+CPU2.name=Hexa Cored CPU
 
-Modules0.name=Speed Module
-Modules1.name=Center Module
-Modules2.name=Light Module
-Modules3.name=Trash Module
-Modules4.name=Testing Module
+HardDrive0.name=Hard Drive
+HardDrive1.name=Hard Drive
+HardDrive2.name=Hard Drive
 
 #Creative Tabs
-itemGroup.TerrificTransportation Blocks=TT Blocks
-itemGroup.TerrificTransportation Items=TT Items
+
+itemGroup.TerrificTransportation Blocks=Modular Transportation Blocks
+itemGroup.TerrificTransportation Items=Modular Transportation Items
