@@ -7,6 +7,7 @@ public class RenderIDs {
     public static int RouterRenderID;
     public static int ConveyorRenderID;
     public static int PropertyBinderRenderID;
+    public static int PropertyCubeRenderID;
 
 
 }

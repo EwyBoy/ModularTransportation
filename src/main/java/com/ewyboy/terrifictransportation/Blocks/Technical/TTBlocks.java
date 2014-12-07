@@ -11,8 +11,7 @@ public class TTBlocks {
     public static Block PropertyInscriber;
     public static Block PropertyBinder;
     public static Block Monitor;
-    public static Block AdaptationCube;
-    public static Block OperationCube;
+    public static Block PropertyCube;
     public static Block Router;
 
     public static void init() {
@@ -35,11 +34,8 @@ public class TTBlocks {
         Monitor = new Monitor().setBlockName(BlockInfo.Monitor);
         GameRegistry.registerBlock(Monitor,BlockInfo.Monitor);
 
-        AdaptationCube = new AdaptationCube().setBlockName(BlockInfo.AdaptationCube);
-        GameRegistry.registerBlock(AdaptationCube,BlockInfo.AdaptationCube);
-
-        OperationCube = new OperationCube().setBlockName(BlockInfo.OperationCube);
-        GameRegistry.registerBlock(OperationCube,BlockInfo.OperationCube);
+        PropertyCube = new PropertyCube().setBlockName(BlockInfo.AdaptationCube);
+        GameRegistry.registerBlock(PropertyCube,BlockInfo.AdaptationCube);
 
         Router = new Router().setBlockName(BlockInfo.Router);
         GameRegistry.registerBlock(Router, BlockInfo.Router);

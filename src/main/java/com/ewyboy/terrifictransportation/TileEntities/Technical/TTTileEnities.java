@@ -7,6 +7,6 @@ public class TTTileEnities {
     }
 
     public static void registerTileEntities() {
-
+        
     }
 }

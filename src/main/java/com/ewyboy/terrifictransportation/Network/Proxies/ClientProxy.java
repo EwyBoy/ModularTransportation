@@ -27,6 +27,10 @@ public class ClientProxy extends CommonProxy {
         RenderingRegistry.registerBlockHandler(propertyBinderRender);
         RenderIDs.PropertyBinderRenderID = propertyBinderRender.getRenderId();
 
+        PropertyCubeRender propertyCubeRender = new PropertyCubeRender();
+        RenderingRegistry.registerBlockHandler(propertyCubeRender);
+        RenderIDs.PropertyCubeRenderID = propertyCubeRender.getRenderId();
+
         MonitorRender monitorRender = new MonitorRender();
         RenderingRegistry.registerBlockHandler(monitorRender);
         RenderIDs.MonitorRenderID = monitorRender.getRenderId();

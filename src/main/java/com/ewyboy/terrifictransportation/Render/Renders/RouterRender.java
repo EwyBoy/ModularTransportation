@@ -1,6 +1,5 @@
 package com.ewyboy.terrifictransportation.Render.Renders;
 
-import com.ewyboy.terrifictransportation.Blocks.Block.Router;
 import com.ewyboy.terrifictransportation.Blocks.Technical.TTBlocks;
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 import cpw.mods.fml.client.registry.RenderingRegistry;
