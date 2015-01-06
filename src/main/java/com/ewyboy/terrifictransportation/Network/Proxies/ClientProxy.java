@@ -2,6 +2,7 @@ package com.ewyboy.terrifictransportation.Network.Proxies;
 
 import com.ewyboy.terrifictransportation.KeyBindings.KeyBindings;
 import com.ewyboy.terrifictransportation.Render.Renders.*;
+import com.ewyboy.terrifictransportation.TileEntities.TileEntity.PropertyCubeTile;
 import com.ewyboy.terrifictransportation.Utillity.StringMaps.RenderIDs;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
@@ -27,9 +28,11 @@ public class ClientProxy extends CommonProxy {
         RenderingRegistry.registerBlockHandler(propertyBinderRender);
         RenderIDs.PropertyBinderRenderID = propertyBinderRender.getRenderId();
 
-        PropertyCubeRender propertyCubeRender = new PropertyCubeRender();
+        /**PropertyCubeModel propertyCubeRender = new PropertyCubeModel();
         RenderingRegistry.registerBlockHandler(propertyCubeRender);
-        RenderIDs.PropertyCubeRenderID = propertyCubeRender.getRenderId();
+        RenderIDs.PropertyCubeRenderID = propertyCubeRender.getRenderId();*/
+
+        ClientRegistry.bindTileEntitySpecialRenderer(PropertyCubeTile.class, new PropertyCubeRender());
 
         MonitorRender monitorRender = new MonitorRender();
         RenderingRegistry.registerBlockHandler(monitorRender);

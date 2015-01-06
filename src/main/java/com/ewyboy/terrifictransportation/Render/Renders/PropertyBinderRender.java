@@ -31,7 +31,7 @@ public class PropertyBinderRender implements ISimpleBlockRenderingHandler {
 
         tessellator.startDrawingQuads();
         tessellator.setNormal(0.0F, -1.0F, 0.0F);
-        renderer.renderFaceYNeg(block, 0.0D, 0.0D, 0.0D, block.getIcon(0, metadata));
+        renderer.renderFaceYNeg(block, 0.0, 0.0, 0.0, block.getIcon(0, metadata));
         tessellator.draw();
 
         tessellator.startDrawingQuads();

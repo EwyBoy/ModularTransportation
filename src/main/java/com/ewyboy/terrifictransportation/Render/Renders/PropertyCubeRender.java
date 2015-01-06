@@ -1,79 +1,42 @@
 package com.ewyboy.terrifictransportation.Render.Renders;
 
-import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
-import cpw.mods.fml.client.registry.RenderingRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.client.renderer.RenderBlocks;
-import net.minecraft.client.renderer.Tessellator;
-import net.minecraft.world.IBlockAccess;
+import com.ewyboy.terrifictransportation.Render.Renders.Models.PropertyCubeModel;
+import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
+import net.minecraft.entity.Entity;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
 import org.lwjgl.opengl.GL11;
 
-public class PropertyCubeRender implements ISimpleBlockRenderingHandler {
+public class PropertyCubeRender extends TileEntitySpecialRenderer {
 
-    private int renderID;
+    //The model of your block
+    public final PropertyCubeModel model;
 
     public PropertyCubeRender() {
-        renderID = RenderingRegistry.getNextAvailableRenderId();
+        this.model = new PropertyCubeModel();
     }
 
-    @Override
-    public void renderInventoryBlock(Block block, int metadata, int modelId, RenderBlocks renderer) {
-        block.setBlockBoundsForItemRender();
-        renderer.setRenderBoundsFromBlock(block);
-
-        // RenderItem.getInstance().doRender();
-
+    private void adjustRotatePivotViaMeta(World world, int x, int y, int z) {
+        int meta = world.getBlockMetadata(x, y, z);
         GL11.glPushMatrix();
-
-        GL11.glTranslatef(-0.5F, -0.5F, -0.5F);
-
-        Tessellator tessellator = Tessellator.instance;
-
-        tessellator.startDrawingQuads();
-        tessellator.setNormal(0.0F, -1.0F, 0.0F);
-        renderer.renderFaceYNeg(block, 0.0D, 0.0D, 0.0D, block.getIcon(0, metadata));
-        tessellator.draw();
-
-        tessellator.startDrawingQuads();
-        tessellator.setNormal(0F, 1F, 0F);
-        renderer.renderFaceYPos(block, 0, 0, 0, block.getIcon(1, metadata));
-        tessellator.draw();
-
-        tessellator.startDrawingQuads();
-        tessellator.setNormal(0.0F, 0.0F, -1.0F);
-        renderer.renderFaceZNeg(block, 0.0D, 0.0D, 0.0D, block.getIcon(2, metadata));
-        tessellator.draw();
-
-        tessellator.startDrawingQuads();
-        tessellator.setNormal(0.0F, 0.0F, 1.0F);
-        renderer.renderFaceZPos(block, 0.0D, 0.0D, 0.0D, block.getIcon(3, metadata));
-        tessellator.draw();
-
-        tessellator.startDrawingQuads();
-        tessellator.setNormal(-1.0F, 0.0F, 0.0F);
-        renderer.renderFaceXNeg(block, 0.0D, 0.0D, 0.0D, block.getIcon(4, metadata));
-        tessellator.draw();
-
-        tessellator.startDrawingQuads();
-        tessellator.setNormal(1.0F, 0.0F, 0.0F);
-        renderer.renderFaceXPos(block, 0.0D, 0.0D, 0.0D, block.getIcon(5, metadata));
-        tessellator.draw();
-
+        GL11.glRotatef(meta * (-90), 0.0F, 0.0F, 1.0F);
         GL11.glPopMatrix();
     }
 
     @Override
-    public boolean renderWorldBlock(IBlockAccess world, int x, int y, int z, Block block, int modelId, RenderBlocks renderer) {
-        return false;
-    }
+    public void renderTileEntityAt(TileEntity tileEntity, double x, double y, double z, float f) {
+        //The PushMatrix tells the renderer to "start" doing something.
+        GL11.glPushMatrix();
+        //This is setting the initial location.
+        GL11.glTranslatef((float) x + 0.5F, (float) y + 1.5F, (float) z + 0.5F);
 
-    @Override
-    public boolean shouldRender3DInInventory(int modelId) {
-        return true;
-    }
-
-    @Override
-    public int getRenderId() {
-        return renderID;
+        //This rotation part is very important! Without it, your model will render upside-down! And for some reason you DO need PushMatrix again!
+        GL11.glPushMatrix();
+        GL11.glRotatef(180F, 0.0F, 0.0F, 1.0F);
+        //A reference to your Model file. Again, very important.
+        this.model.render((Entity)null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
+        //Tell it to stop rendering for both the PushMatrix's
+        GL11.glPopMatrix();
+        GL11.glPopMatrix();
     }
 }

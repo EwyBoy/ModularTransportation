@@ -31,14 +31,13 @@ public class TTBlocks {
         PropertyBinder = new PropertyBinder().setBlockName(BlockInfo.PropertyBinder);
         GameRegistry.registerBlock(PropertyBinder, BlockInfo.PropertyBinder);
 
+        PropertyCube = new PropertyCube().setBlockName(BlockInfo.PropertyCube);
+        GameRegistry.registerBlock(PropertyCube,BlockInfo.PropertyCube);
+
         Monitor = new Monitor().setBlockName(BlockInfo.Monitor);
         GameRegistry.registerBlock(Monitor,BlockInfo.Monitor);
 
-        PropertyCube = new PropertyCube().setBlockName(BlockInfo.AdaptationCube);
-        GameRegistry.registerBlock(PropertyCube,BlockInfo.AdaptationCube);
-
         Router = new Router().setBlockName(BlockInfo.Router);
         GameRegistry.registerBlock(Router, BlockInfo.Router);
-
     }
 }

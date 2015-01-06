@@ -5,6 +5,7 @@ import com.ewyboy.terrifictransportation.CreativeTabs.TTCreativeTabs;
 import com.ewyboy.terrifictransportation.Items.Technical.TTItems;
 import com.ewyboy.terrifictransportation.Network.Proxies.CommonProxy;
 import com.ewyboy.terrifictransportation.Recipes.CraftingRecipes;
+import com.ewyboy.terrifictransportation.TileEntities.TileEntity.PropertyCubeTile;
 import com.ewyboy.terrifictransportation.Utillity.Handlers.ConfigHandler;
 import com.ewyboy.terrifictransportation.Utillity.Handlers.Debugger;
 import com.ewyboy.terrifictransportation.Utillity.Handlers.KeyInputHandler;
@@ -15,6 +16,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = ModInfo.ModID, name = ModInfo.ModName, version = ModInfo.ModVersion)
 
