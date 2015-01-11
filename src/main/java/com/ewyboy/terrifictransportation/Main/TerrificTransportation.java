@@ -5,6 +5,7 @@ import com.ewyboy.terrifictransportation.CreativeTabs.TTCreativeTabs;
 import com.ewyboy.terrifictransportation.Items.Technical.TTItems;
 import com.ewyboy.terrifictransportation.Network.Proxies.CommonProxy;
 import com.ewyboy.terrifictransportation.Recipes.CraftingRecipes;
+import com.ewyboy.terrifictransportation.TileEntities.Technical.TTTileEnities;
 import com.ewyboy.terrifictransportation.TileEntities.TileEntity.PropertyCubeTile;
 import com.ewyboy.terrifictransportation.Utillity.Handlers.ConfigHandler;
 import com.ewyboy.terrifictransportation.Utillity.Handlers.Debugger;
@@ -34,6 +35,7 @@ public class TerrificTransportation {
         TTItems.init();
         //TTTileEnities.init();
         TTCreativeTabs.init();
+        TTTileEnities.registerTileEntities();
         proxy.initRenders();
         Debugger.info("Pre Initialization Complete!");
         ConfigHandler.init(event.getSuggestedConfigurationFile());

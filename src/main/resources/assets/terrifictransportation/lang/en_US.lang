@@ -3,15 +3,15 @@
 tile.Conveyor.name=Conveyor
 tile.Router.name=Router
 tile.Pipe.name=Pipe
-tile.PropertyInscriber.name
-tile.PropertyBinder.name
-tile.Monitor.name
-tile.PropertyCube.name
+tile.PropertyInscriber.name=Property Inscriber
+tile.PropertyBinder.name=Property Binder
+tile.PropertyCube.name=Property Cube
+tile.Monitor.name=Monitor
 
 #Items
 
 item.Wrench.name=Wrench
-item.SDCard.name=SD
+item.SDCard.name=SD-Card
 
 CPU0.name=Mono Cored CPU
 CPU1.name=Quad Cored CPU

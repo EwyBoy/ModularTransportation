@@ -6,10 +6,12 @@ import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLiquid;
+import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 import org.lwjgl.opengl.GL11;
 
 public class PipeRender implements ISimpleBlockRenderingHandler {
@@ -73,6 +75,19 @@ public class PipeRender implements ISimpleBlockRenderingHandler {
         tessellator.draw();
 
         GL11.glPopMatrix();
+    }
+
+    //Set the lighting stuff, so it changes it's brightness properly.
+    private void adjustLightFixture(World world, int i, int j, int k, Block block) {
+        Tessellator tess = Tessellator.instance;
+        //float brightness = block.getBlockBrightness(world, i, j, k);
+        //As of MC 1.7+ block.getBlockBrightness() has become block.getLightValue():
+        float brightness = block.getLightValue(world, i, j, k);
+        int skyLight = world.getLightBrightnessForSkyBlocks(i, j, k, 0);
+        int modulousModifier = skyLight % 65536;
+        int divModifier = skyLight / 65536;
+        tess.setColorOpaque_F(brightness, brightness, brightness);
+        OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, (float) modulousModifier, divModifier);
     }
 
     private void renderDefault(IBlockAccess world, int x, int y, int z, Block block, int modelId, RenderBlocks renderer) {
