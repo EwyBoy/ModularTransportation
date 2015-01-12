@@ -22,8 +22,6 @@ public class PropertyInscriberRender implements ISimpleBlockRenderingHandler {
         block.setBlockBoundsForItemRender();
         renderer.setRenderBoundsFromBlock(block);
 
-       // RenderItem.getInstance().doRender();
-
         GL11.glPushMatrix();
 
         GL11.glTranslatef(-0.5F, -0.5F, -0.5F);

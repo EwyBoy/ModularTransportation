@@ -4,7 +4,7 @@ import com.ewyboy.terrifictransportation.TileEntities.TileEntity.*;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.tileentity.TileEntity;
 
-public class TTTileEnities {
+public class MTTileEnities {
 
     public static void Init() {
         registerTileEntities();

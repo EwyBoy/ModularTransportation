@@ -7,9 +7,9 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.common.config.ConfigElement;
 import net.minecraftforge.common.config.Configuration;
 
-public class TTGUIConfig extends GuiConfig {
+public class MTGUIConfig extends GuiConfig {
 
-    public TTGUIConfig(GuiScreen guiScreen)
+    public MTGUIConfig(GuiScreen guiScreen)
     {
         super(guiScreen,
                 new ConfigElement(ConfigHandler.configuration.getCategory(Configuration.CATEGORY_GENERAL)).getChildElements(),

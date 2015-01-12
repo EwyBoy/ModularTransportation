@@ -1,7 +1,6 @@
 package com.ewyboy.terrifictransportation.Blocks.Block;
 
-import com.ewyboy.terrifictransportation.CreativeTabs.TTCreativeTabs;
-import com.ewyboy.terrifictransportation.Items.Technical.ItemInfo;
+import com.ewyboy.terrifictransportation.CreativeTabs.MTCreativeTabs;
 import com.ewyboy.terrifictransportation.Utillity.StringMaps.RenderIDs;
 import com.ewyboy.terrifictransportation.Utillity.StringMaps.TexturePath;
 import cpw.mods.fml.relauncher.Side;
@@ -21,7 +20,7 @@ public class Monitor extends Block {
 
     public Monitor() {
         super(Material.iron);
-        setCreativeTab(TTCreativeTabs.TTBlockTab);
+        setCreativeTab(MTCreativeTabs.TTBlockTab);
     }
 
     @Override
@@ -63,7 +62,7 @@ public class Monitor extends Block {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister register) {
-        Texture = register.registerIcon(TexturePath.texturePath + ":" + "Screen");
+        Texture = register.registerIcon(TexturePath.texturePath + ":" + "ScreenAnimation");
     }
 
     @Override

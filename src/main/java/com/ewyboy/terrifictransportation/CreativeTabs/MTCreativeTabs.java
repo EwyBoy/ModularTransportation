@@ -1,14 +1,12 @@
 package com.ewyboy.terrifictransportation.CreativeTabs;
 
-import com.ewyboy.terrifictransportation.Blocks.Technical.TTBlocks;
-import com.ewyboy.terrifictransportation.Items.Technical.TTItems;
+import com.ewyboy.terrifictransportation.Blocks.Technical.MTBlocks;
+import com.ewyboy.terrifictransportation.Items.Technical.MTItems;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class TTCreativeTabs {
+public class MTCreativeTabs {
 
     public static void init() {
         addCreativeTabs();
@@ -16,18 +14,18 @@ public class TTCreativeTabs {
 
     public static void addCreativeTabs() {}
 
-        public static CreativeTabs TTBlockTab = new CreativeTabs("TerrificTransportation Blocks") {
+        public static CreativeTabs TTBlockTab = new CreativeTabs("Modular Transportation Blocks") {
             public ItemStack getIconItemStack() {
-                return new ItemStack(TTBlocks.Pipe);
+                return new ItemStack(MTBlocks.Pipe);
             }
             @Override
             public Item getTabIconItem() {
                 return null;
             }
         };
-            public static CreativeTabs TTItemTab = new CreativeTabs("TerrificTransportation Items") {
+            public static CreativeTabs TTItemTab = new CreativeTabs("Modular Transportation Items") {
                 public ItemStack getIconItemStack() {
-                    return new ItemStack(TTItems.Wrench);
+                    return new ItemStack(MTItems.Wrench);
                 }
             @Override
             public Item getTabIconItem() {

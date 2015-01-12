@@ -1,6 +1,6 @@
 package com.ewyboy.terrifictransportation.Items.Item;
 
-import com.ewyboy.terrifictransportation.CreativeTabs.TTCreativeTabs;
+import com.ewyboy.terrifictransportation.CreativeTabs.MTCreativeTabs;
 import com.ewyboy.terrifictransportation.Utillity.StringMaps.TexturePath;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -19,7 +19,7 @@ public class Wrench extends Item {
     public Wrench() {
         super();
         setMaxStackSize(1);
-        setCreativeTab(TTCreativeTabs.TTItemTab);
+        setCreativeTab(MTCreativeTabs.TTItemTab);
     }
 
     private int ModeDeactivated = 0;

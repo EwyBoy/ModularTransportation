@@ -1,6 +1,6 @@
 package com.ewyboy.terrifictransportation.Render.Renders;
 
-import com.ewyboy.terrifictransportation.Blocks.Technical.TTBlocks;
+import com.ewyboy.terrifictransportation.Blocks.Technical.MTBlocks;
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import net.minecraft.block.Block;
@@ -96,7 +96,7 @@ public class RouterRender implements ISimpleBlockRenderingHandler {
             renderer.setRenderBoundsFromBlock(block);
             renderer.renderStandardBlock(block, x, y ,z);
         }
-        else if (world.getBlock(x + 1, y, z) == TTBlocks.Pipe) {
+        else if (world.getBlock(x + 1, y, z) == MTBlocks.Pipe) {
             block.setBlockBounds(0.75F, 0.30F, 0.30F, 1F, 0.70F, 0.70F);
             renderer.setRenderBoundsFromBlock(block);
             renderer.renderStandardBlock(block, x, y ,z);
@@ -120,7 +120,7 @@ public class RouterRender implements ISimpleBlockRenderingHandler {
             renderer.setRenderBoundsFromBlock(block);
             renderer.renderStandardBlock(block, x, y ,z);
         }
-        else if (world.getBlock(x - 1, y, z) == TTBlocks.Pipe) {
+        else if (world.getBlock(x - 1, y, z) == MTBlocks.Pipe) {
             block.setBlockBounds(0.25F, 0.30F, 0.70F, 0F, 0.70F, 0.30F);
             renderer.setRenderBoundsFromBlock(block);
             renderer.renderStandardBlock(block, x, y ,z);
@@ -144,7 +144,7 @@ public class RouterRender implements ISimpleBlockRenderingHandler {
             renderer.setRenderBoundsFromBlock(block);
             renderer.renderStandardBlock(block, x, y ,z);
         }
-        else if (world.getBlock(x, y, z + 1) == TTBlocks.Pipe) {
+        else if (world.getBlock(x, y, z + 1) == MTBlocks.Pipe) {
             block.setBlockBounds(0.25F, 0.30F, 0.70F, 0.75F, 0.70F, 1F);
             renderer.setRenderBoundsFromBlock(block);
             renderer.renderStandardBlock(block, x, y ,z);
@@ -168,7 +168,7 @@ public class RouterRender implements ISimpleBlockRenderingHandler {
             renderer.setRenderBoundsFromBlock(block);
             renderer.renderStandardBlock(block, x, y ,z);
         }
-        else if (world.getBlock(x, y, z - 1) == TTBlocks.Pipe) {
+        else if (world.getBlock(x, y, z - 1) == MTBlocks.Pipe) {
             block.setBlockBounds(0.25F, 0.30F, 0F, 0.75F, 0.70F, 0.25F);
             renderer.setRenderBoundsFromBlock(block);
             renderer.renderStandardBlock(block, x, y ,z);
@@ -181,7 +181,7 @@ public class RouterRender implements ISimpleBlockRenderingHandler {
     }
 
     private void renderSidePosY(IBlockAccess world, int x, int y, int z, Block block, int modelId, RenderBlocks renderer) {
-        if (world.getBlock(x, y + 1, z) == TTBlocks.Pipe) {
+        if (world.getBlock(x, y + 1, z) == MTBlocks.Pipe) {
             block.setBlockBounds(0.25F, 0.30F, 0.25F, 0.75F, 1F, 0.75F);
             renderer.setRenderBoundsFromBlock(block);
             renderer.renderStandardBlock(block, x, y ,z);
@@ -199,28 +199,28 @@ public class RouterRender implements ISimpleBlockRenderingHandler {
 
     @Override
     public boolean renderWorldBlock(IBlockAccess world, int x, int y, int z, Block block, int modelId, RenderBlocks renderer) {
-        Block router = TTBlocks.Router;
+        Block router = MTBlocks.Router;
 
         if (world.getBlock(x, y, z) == router) {
             defaultRender(world, x, y, z, block, modelId, renderer);
 
-            if (world.getTileEntity(x + 1, y, z) instanceof IInventory || world.getBlock(x + 1, y, z) == TTBlocks.Pipe || (world.getBlock(x + 1, y, z)) == router) {
+            if (world.getTileEntity(x + 1, y, z) instanceof IInventory || world.getBlock(x + 1, y, z) == MTBlocks.Pipe || (world.getBlock(x + 1, y, z)) == router) {
                 renderSidePosX(world, x, y, z, block, modelId, renderer);
             }
 
-            if (world.getTileEntity(x - 1, y, z) instanceof IInventory || world.getBlock(x - 1, y, z) == TTBlocks.Pipe || (world.getBlock(x - 1, y, z)) == router) {
+            if (world.getTileEntity(x - 1, y, z) instanceof IInventory || world.getBlock(x - 1, y, z) == MTBlocks.Pipe || (world.getBlock(x - 1, y, z)) == router) {
                 renderSideNegX(world, x, y, z, block, modelId, renderer);
             }
 
-            if (world.getTileEntity(x, y, z + 1) instanceof IInventory || world.getBlock(x, y, z + 1) == TTBlocks.Pipe || (world.getBlock(x, y, z + 1)) == router) {
+            if (world.getTileEntity(x, y, z + 1) instanceof IInventory || world.getBlock(x, y, z + 1) == MTBlocks.Pipe || (world.getBlock(x, y, z + 1)) == router) {
                 renderSidePosZ(world, x, y, z, block, modelId, renderer);
             }
 
-            if (world.getTileEntity(x, y, z - 1) instanceof IInventory || world.getBlock(x, y, z - 1) == TTBlocks.Pipe || (world.getBlock(x, y, z - 1)) == router) {
+            if (world.getTileEntity(x, y, z - 1) instanceof IInventory || world.getBlock(x, y, z - 1) == MTBlocks.Pipe || (world.getBlock(x, y, z - 1)) == router) {
                 renderSideNegZ(world, x, y, z, block, modelId, renderer);
             }
 
-            if (world.getTileEntity(x, y + 1, z) instanceof IInventory || world.getBlock(x, y + 1, z) == TTBlocks.Pipe || (world.getBlock(x, y + 1, z)) == router) {
+            if (world.getTileEntity(x, y + 1, z) instanceof IInventory || world.getBlock(x, y + 1, z) == MTBlocks.Pipe || (world.getBlock(x, y + 1, z)) == router) {
                 renderSidePosY(world, x, y, z, block, modelId, renderer);
             }
         }

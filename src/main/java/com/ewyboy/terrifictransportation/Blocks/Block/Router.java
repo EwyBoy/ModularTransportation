@@ -1,6 +1,6 @@
 package com.ewyboy.terrifictransportation.Blocks.Block;
 
-import com.ewyboy.terrifictransportation.CreativeTabs.TTCreativeTabs;
+import com.ewyboy.terrifictransportation.CreativeTabs.MTCreativeTabs;
 import com.ewyboy.terrifictransportation.Utillity.StringMaps.RenderIDs;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -19,7 +19,7 @@ public class Router extends BlockContainer {
 
     public Router() {
         super(Material.iron);
-        setCreativeTab(TTCreativeTabs.TTBlockTab);
+        setCreativeTab(MTCreativeTabs.TTBlockTab);
     }
 
     @Override

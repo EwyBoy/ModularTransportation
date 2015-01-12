@@ -1,15 +1,12 @@
 package com.ewyboy.terrifictransportation.Blocks.Block;
 
-import com.ewyboy.terrifictransportation.CreativeTabs.TTCreativeTabs;
+import com.ewyboy.terrifictransportation.CreativeTabs.MTCreativeTabs;
 import com.ewyboy.terrifictransportation.TileEntities.TileEntity.PropertyCubeTile;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
-import net.minecraft.init.Blocks;
+import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.IIcon;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.IBlockAccess;
@@ -19,7 +16,7 @@ public class PropertyCube extends BlockContainer {
 
     public PropertyCube() {
         super(Material.iron);
-        setCreativeTab(TTCreativeTabs.TTBlockTab);
+        setCreativeTab(MTCreativeTabs.TTBlockTab);
     }
 
     @Override
@@ -27,7 +24,6 @@ public class PropertyCube extends BlockContainer {
         return new PropertyCubeTile();
     }
 
-    //You don't want the normal render type, or it wont render properly.
     @Override
     public int getRenderType() {
         return -1;
@@ -35,7 +31,7 @@ public class PropertyCube extends BlockContainer {
 
     @Override
     public void setBlockBoundsBasedOnState(IBlockAccess world, int x, int y, int z) {
-        setBlockBounds(0.20F, 0F, 0.20F, 0.80F, 0.80F, 0.80F);
+        setBlockBounds(0.10F, 0F, 0.10F, 0.90F, 0.85F, 0.90F);
     }
 
     @Override

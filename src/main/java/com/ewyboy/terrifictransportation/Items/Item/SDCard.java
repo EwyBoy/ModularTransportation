@@ -1,6 +1,6 @@
 package com.ewyboy.terrifictransportation.Items.Item;
 
-import com.ewyboy.terrifictransportation.CreativeTabs.TTCreativeTabs;
+import com.ewyboy.terrifictransportation.CreativeTabs.MTCreativeTabs;
 import com.ewyboy.terrifictransportation.Items.Technical.ItemInfo;
 import com.ewyboy.terrifictransportation.Utillity.StringMaps.TexturePath;
 import cpw.mods.fml.relauncher.Side;
@@ -13,7 +13,7 @@ public class SDCard extends Item {
 
     public SDCard() {
         super();
-        setCreativeTab(TTCreativeTabs.TTItemTab);
+        setCreativeTab(MTCreativeTabs.TTItemTab);
         setMaxStackSize(64);
     }
 

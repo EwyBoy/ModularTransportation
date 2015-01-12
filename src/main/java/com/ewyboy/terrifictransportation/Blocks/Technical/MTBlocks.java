@@ -4,7 +4,7 @@ import com.ewyboy.terrifictransportation.Blocks.Block.*;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 
-public class TTBlocks {
+public class MTBlocks {
 
     public static Block Pipe;
     public static Block Conveyor;
@@ -13,6 +13,7 @@ public class TTBlocks {
     public static Block Monitor;
     public static Block PropertyCube;
     public static Block Router;
+    public static Block SDCardBlock;
 
     public static void init() {
         registerBlocks();

@@ -2,6 +2,11 @@
 
 tile.Conveyor.name=Samlebånd
 tile.Router.name=Ruter
+tile.Pipe.name=Rør
+tile.PropertyInscriber.name=Egenskap innskriver
+tile.PropertyBinder.name=Egenskap tilegner
+tile.PropertyCube.name=Egenskaps kube
+tile.Monitor.name=Skjerm
 
 #Items
 
@@ -22,5 +27,5 @@ Modules3.name=Søppelkasse Modul
 Modules4.name=Test Modul
 
 #Creative Tabs
-itemGroup.TerrificTransportation Blocks=TT Blokker
-itemGroup.TerrificTransportation Items=TT Utstyr
+itemGroup.TerrificTransportation Blocks=MT Blokker
+itemGroup.TerrificTransportation Items=MT Utstyr

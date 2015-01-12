@@ -1,6 +1,6 @@
 package com.ewyboy.terrifictransportation.Render.Renders;
 
-import com.ewyboy.terrifictransportation.Blocks.Technical.TTBlocks;
+import com.ewyboy.terrifictransportation.Blocks.Technical.MTBlocks;
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import net.minecraft.block.Block;
@@ -116,24 +116,24 @@ public class PropertyBinderRender implements ISimpleBlockRenderingHandler {
         renderer.setRenderBoundsFromBlock(block);
         renderer.renderStandardBlock(block, x, y ,z);
 
-        if(world.getBlock(x,y,z+1) == TTBlocks.Monitor) {
+        if(world.getBlock(x,y,z+1) == MTBlocks.Monitor) {
             //WireIn
             block.setBlockBounds(0.10F, 0.0F, 0.47F, 0.15F, 0.03F, 1.47F);
             renderer.setRenderBoundsFromBlock(block);
             renderer.renderStandardBlock(block, x, y, z);
-        } else if (world.getBlock(x,y,z-1) == TTBlocks.Monitor) {
+        } else if (world.getBlock(x,y,z-1) == MTBlocks.Monitor) {
             //WireIn
             block.setBlockBounds(0.10F, 0.0F, -0.47F, 0.15F, 0.03F, 0.53F);
             renderer.setRenderBoundsFromBlock(block);
             renderer.renderStandardBlock(block, x, y, z);
         }
-        if (world.getBlock(x,y,z+1) == TTBlocks.PropertyInscriber) {
+        if (world.getBlock(x,y,z+1) == MTBlocks.PropertyInscriber) {
             //WireOut
             block.setBlockBounds(0.15F, 0.0F, 0.47F, 0.25F, 0.03F, 0.53F);
             renderer.setRenderBoundsFromBlock(block);
             renderer.renderStandardBlock(block, x, y, z);
 
-        } else if (world.getBlock(x,y,z-1) == TTBlocks.PropertyInscriber) {
+        } else if (world.getBlock(x,y,z-1) == MTBlocks.PropertyInscriber) {
             //WireOut
             block.setBlockBounds(0.15F, 0.0F, 0.47F, 0.25F, 0.03F, 0.53F);
             renderer.setRenderBoundsFromBlock(block);

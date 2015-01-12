@@ -1,6 +1,6 @@
 package com.ewyboy.terrifictransportation.Render.Renders;
 
-import com.ewyboy.terrifictransportation.Render.Renders.Models.PropertyCubeModel;
+import com.ewyboy.terrifictransportation.Render.Models.PropertyCubeModel;
 import com.ewyboy.terrifictransportation.Utillity.StringMaps.TexturePath;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
@@ -32,9 +32,9 @@ public class PropertyCubeRender extends TileEntitySpecialRenderer {
     public void renderTileEntityAt(TileEntity tileEntity, double x, double y, double z, float f) {
         GL11.glPushMatrix();
         GL11.glTranslatef((float) x + 0.5F, (float) y + 1.5F, (float) z + 0.5F);
-        ResourceLocation textures = (new ResourceLocation(TexturePath.texturePath + ":" + ":textures/blocks/PropertyCube01.png"));
+        Minecraft.getMinecraft().renderEngine.bindTexture(new ResourceLocation(TexturePath.texturePath + ":" + "textures/blocks/TestTexture.png"));
         OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, 240f, 240f);
-        Minecraft.getMinecraft().renderEngine.bindTexture(textures);
+        GL11.glColor3f(0.0F,1.0F,0.0F);
 
             GL11.glPushMatrix();
             GL11.glRotatef(180F, 0.0F, 0.0F, 1.0F);

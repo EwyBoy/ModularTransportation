@@ -1,6 +1,6 @@
 package com.ewyboy.terrifictransportation.Render.Renders;
 
-import com.ewyboy.terrifictransportation.Blocks.Technical.TTBlocks;
+import com.ewyboy.terrifictransportation.Blocks.Technical.MTBlocks;
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import net.minecraft.block.Block;
@@ -8,7 +8,6 @@ import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.init.Blocks;
 import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.InventoryBasic;
 import net.minecraft.world.IBlockAccess;
 import org.lwjgl.opengl.GL11;
 
@@ -179,10 +178,10 @@ public class ConveyorRender implements ISimpleBlockRenderingHandler {
     @Override
     public boolean renderWorldBlock(IBlockAccess world, int x, int y, int z, Block block, int modelId, RenderBlocks renderer) {
         //RenderRails
-        if (world.getBlock(x,y,z+1) == TTBlocks.Conveyor || !(world.getBlock(x,y,z-1) == TTBlocks.Conveyor)) {
+        if (world.getBlock(x,y,z+1) == MTBlocks.Conveyor || !(world.getBlock(x,y,z-1) == MTBlocks.Conveyor)) {
             renderRail01(world, x, y, z, block, modelId, renderer);
             renderRail02(world, x, y, z, block, modelId, renderer);
-        } else if (world.getBlock(x+1,y,z) == TTBlocks.Conveyor || world.getBlock(x-1,y,z) == TTBlocks.Conveyor) {
+        } else if (world.getBlock(x+1,y,z) == MTBlocks.Conveyor || world.getBlock(x-1,y,z) == MTBlocks.Conveyor) {
             renderRail03(world, x, y, z, block, modelId, renderer);
             renderRail04(world, x, y, z, block, modelId, renderer);
         } else {

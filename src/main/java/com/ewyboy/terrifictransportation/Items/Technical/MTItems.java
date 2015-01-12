@@ -7,7 +7,7 @@ import com.ewyboy.terrifictransportation.Items.Item.Wrench;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
 
-public class TTItems {
+public class MTItems {
 
     public static Item Wrench;
     public static Item CPU;
